@@ -1,12 +1,79 @@
-﻿@page
-@model IndexModel
-@{    
-    ViewData["Title"] = "Home page";
-}
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #ff0000, #ff7f50, #ff00ff, #ff1493, #1e90ff);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite;
+            color: white;
+            text-align: center;
+        }
 
-<div class="text-center">
-    <h1 class="display-4">Hello World from .NET 8</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <hr />
-    <div>Host operating system: @Model.OSVersion</div>
-</div>
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .coming-soon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">LOGO</div>
+        <div class="coming-soon">Coming soon</div>
+        <div class="description">
+            Pracujemy nad nową wersją naszej strony, pojawi się ona wkrótce. 
+            Obserwuj nasze social media, aby być na bieżąco.
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
